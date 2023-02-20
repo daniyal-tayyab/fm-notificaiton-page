@@ -1,0 +1,22 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// media query manager
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    //600px => 600/16 = 37.5em
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    //900px => 900/16 = 56.25em
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+}

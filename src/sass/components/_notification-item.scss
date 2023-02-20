@@ -1,0 +1,92 @@
+.notification-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.notification-item {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  &__icon {
+    width: 4rem;
+  }
+
+  &__message {
+    display: flex;
+    align-items: center;
+
+    &__username {
+      color: $color-very-dark-blue;
+      margin-right: 0.5rem;
+      transition: all 0.2s;
+      font-weight: 800;
+      font-size: 1.4rem;
+
+      &:hover {
+        color: $color-blue;
+        cursor: pointer;
+      }
+    }
+
+    &__event {
+      margin-right: 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    &__group {
+      color: $color-dark-grayish-blue;
+      font-weight: 800;
+      font-size: 1.4rem;
+
+      &:hover {
+        color: $color-blue;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__unread {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: $color-red;
+    margin-left: 0.5rem;
+  }
+
+  &__time {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  &__post-image {
+    height: 3.5rem;
+    margin-left: auto;
+    margin-top: -1rem;
+    cursor: pointer;
+  }
+
+  &__private-message {
+    padding: 1rem 1.5rem;
+    color: $color-dark-grayish-blue;
+    margin-top: 1rem;
+    max-width: 70%;
+    border: 1px solid $color-light-grayish-blue-2;
+    margin-left: 6rem;
+
+    font-size: 1.3rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-light-grayish-blue-2;
+      cursor: pointer;
+    }
+  }
+}
+
+.notification-item-message-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
